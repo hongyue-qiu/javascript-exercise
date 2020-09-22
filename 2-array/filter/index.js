@@ -1,16 +1,11 @@
 function chooseMultiplesOfThree(collection) {
   // TODO 1: 在这里写实现代码
-  const array = [];
-  collection.forEach(function(e) {
-    if (e % 3 == 0) array.push(e);
-  });
-  return array;
+  return collection.filter(n => n % 3 === 0);
 }
 
 function chooseNoRepeatNumber(collection) {
   // TODO 2: 在这里写实现代码
-  const array = [...new Set(collection)];
-  return array;
+  return [...new Set(collection)];
 }
 
 export { chooseMultiplesOfThree, chooseNoRepeatNumber };

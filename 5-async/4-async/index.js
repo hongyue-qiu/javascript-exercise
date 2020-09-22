@@ -12,7 +12,6 @@ async function fetchData(url) {
   } catch (error) {
     Promise.reject(error);
   }
-  console.log(result);
   return result;
   // end -->
 }
