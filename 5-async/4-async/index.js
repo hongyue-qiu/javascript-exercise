@@ -4,9 +4,13 @@ async function fetchData(url) {
   // eslint-disable-next-line prettier/prettier
   const result = await fetch(url);
   const data = await result.json();
-  if (result.status >= 200 && result.status < 300) {
-    console.log(data);
-    return data;
+  try {
+    if (result.status >= 200 && result.status < 300) {
+      console.log(data);
+      return data;
+    }
+  } catch (error) {
+    Promise.reject(error);
   }
   console.log(result);
   return result;
