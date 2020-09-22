@@ -7,7 +7,7 @@ async function fetchData(url) {
   try {
     if (result.status >= 200 && result.status < 300) {
       console.log(data);
-      return data;
+      return document.writeln(data.name);
     }
   } catch (error) {
     Promise.reject(error);
